@@ -1,10 +1,17 @@
 package ca.senecacollege.models;
 
-public class Sedan extends passengerVehicles{
+import ca.senecacollege.abstracts.passengerVehicles;
+
+public class Sedan extends passengerVehicles {
     public Sedan(String name, double purchasePrice, int currentMileage){
         super(name, purchasePrice, currentMileage);
-        super.fuelType = "Petrol";
-        super.serviceInterval = -1; //-1 for not applicable
-        super.maintenanceCost = 1600.00;
+        super.primaryFunction = "Executive transportation, client visits";
+        super.serviceInterval = 10000;
+        super.maintenanceCost = 350.00;
+        super.fuelType = "Gasoline";
+    }
+    @Override
+    public String toString(){
+        return "Vehicle Name: " + super.name + ", Purchase Price: $" + super.purchasePrice;
     }
 }

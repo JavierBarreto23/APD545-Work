@@ -1,10 +1,18 @@
 package ca.senecacollege.models;
 
-public class SUV extends passengerVehicles{
+import ca.senecacollege.abstracts.passengerVehicles;
+
+public class SUV extends passengerVehicles {
     public SUV(String name, double purchasePrice, int currentMileage){
         super(name, purchasePrice, currentMileage);
-        super.fuelType = "Diesel";
-        super.serviceInterval = -1;//-1 for not applicable
-        super.maintenanceCost = 1234.67;
+        super.primaryFunction = "Family transportation, client visits";
+        super.serviceInterval = 12000;//-1 for not applicable
+        super.maintenanceCost = 450.00;
+        super.fuelType = "Hybrid";
+
+    }
+    @Override
+    public String toString(){
+        return "Vehicle Name: " + super.name + ", Purchase Price: $" + super.purchasePrice;
     }
 }

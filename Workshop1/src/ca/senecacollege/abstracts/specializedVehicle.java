@@ -1,11 +1,8 @@
-package ca.senecacollege.models;
+package ca.senecacollege.abstracts;
 
-import ca.senecacollege.abstracts.Vehicle;
-
-public class specializedVehicle extends Vehicle {
+public abstract class specializedVehicle extends Vehicle {
     public specializedVehicle(String name, double purchasePrice, int currentMileage) {
         super(name, purchasePrice, currentMileage);
-        super.primaryFunction = "Specialized Vehicles";
     }
 
     @Override

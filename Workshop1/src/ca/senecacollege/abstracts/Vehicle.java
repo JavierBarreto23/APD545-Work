@@ -1,6 +1,11 @@
 package ca.senecacollege.abstracts;
 
-public abstract class Vehicle {
+import ca.senecacollege.interfaces.vehicleFilter;
+import ca.senecacollege.interfaces.vehicleMaintenance;
+import ca.senecacollege.interfaces.vehicleOperations;
+
+
+public abstract class Vehicle implements vehicleOperations, vehicleMaintenance, vehicleFilter {
     public String name;
     public double purchasePrice;
     public int currentMileage;
@@ -25,13 +30,30 @@ public abstract class Vehicle {
         return this.purchasePrice;
     }
 
-    public String toString(){
-        String info = "Name: " + this.name + "\n" +
-                "Purchase Price: " + this.purchasePrice + "\n"+
-                "Current Mileage: " + this.getCurrentMileage() + "\n";
-        return info;
-    }
+    public abstract String toString();
 
     public abstract int compareTo(Vehicle other);
+
+
+    public String getPrimaryFunction() {
+        return primaryFunction;
+    }
+
+    public String getFuelType(){
+        return fuelType;
+    }
+
+    public int getServiceInterval(){
+        return serviceInterval;
+    }
+
+    public double getMaintenanceCost(){
+        return  maintenanceCost;
+    }
+
+    public boolean match(Vehicle v){
+        return true;
+    }
+
 
 }

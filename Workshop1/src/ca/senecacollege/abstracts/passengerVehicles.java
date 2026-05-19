@@ -1,12 +1,9 @@
-package ca.senecacollege.models;
-
-import ca.senecacollege.abstracts.Vehicle;
+package ca.senecacollege.abstracts;
 
 public abstract class passengerVehicles extends Vehicle {
 
     public passengerVehicles(String name, double purchasePrice, int currentMileage){
         super(name, purchasePrice, currentMileage);
-        super.primaryFunction = "Passenger Vehicles";
 
     }
 

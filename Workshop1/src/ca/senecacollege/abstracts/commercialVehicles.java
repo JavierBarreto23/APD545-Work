@@ -1,12 +1,8 @@
-package ca.senecacollege.models;
+package ca.senecacollege.abstracts;
 
-import ca.senecacollege.abstracts.Vehicle;
-
-public class commercialVehicles extends Vehicle {
+public abstract class commercialVehicles extends Vehicle {
     public commercialVehicles(String name, double purchasePrice, int currentMileage){
         super(name,purchasePrice,currentMileage);
-        super.primaryFunction = "Commercial Vehicles";
-        super.fuelType = "Diesel";
     }
 
     @Override
